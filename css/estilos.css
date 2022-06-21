@@ -1,0 +1,86 @@
+.footer {
+  width: 100%;
+  background-color: black;
+}
+
+.tr-tabela td,
+th {
+  border: 1px solid #808080;
+  padding: 5px 10px;
+}
+
+.botao-gerar {
+  width: 100%;
+  background-color: #9932cc !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-wrapper {
+  background-color: #9932cc !important;
+}
+
+body {
+  background-color: #f8f8ff;
+  font-family: sans-serif !important;
+}
+
+.wrapper-geral {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  min-width: 1000px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.modal-detalhes-trigger {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-modal {
+  top: 3.5px !important;
+  right: 3.5px !important;
+}
+
+.flex-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  border: 2px #9932cc dashed;
+  margin: 5px;
+}
+
+.analise-area {
+  width: 45%;
+}
+
+.tabela-analise {
+  width: 45%;
+  border-left: 2px #9932cc solid;
+  margin-left: 40px;
+  padding-left: 40px;
+  margin-top: 7px;
+}
+
+.botao-mostrar {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #9932cc !important;
+}
+
+.botao-testar {
+  width: 100%;
+  background-color: #9932cc !important;
+}
+
+.tokens-corretos, .tokens-incorretos, .token {
+  border: 1px #9932cc solid !important;
+}
