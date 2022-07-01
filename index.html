@@ -15,7 +15,7 @@
 <nav>
   <div class="nav-wrapper blue">
     <div class="container center-align">
-      <span style="font-size: 30px;">Analisador Sintático</span>
+      <span style="font-size: 30px;">Analisador Sintático Compiladores</span>
     </div>
   </div>
 </nav>
@@ -26,13 +26,13 @@
         <input placeholder="Insira aqui os tokens" class="token"></imput>
       </div>
         <a class="btn blue botao-gerar">
-          Gerar
+          Gerar Sentença
         </a>
         <div class="modal-detalhes-trigger">
-          <a class="botao-mostrar btn blue pull-right" href="#ex1" rel="modal:open">Mostrar Detalhes</a>
+          <a class="botao-mostrar btn blue pull-right" href="#ex1" rel="modal:open">Mostrar Detalhes da Sentença</a>
         </div>
         <a class="btn blue botao-testar">
-          Testar
+          Realizar Teste
         </a>
         <div style="margin-top: 7px">
           <span>Tokens corretos:</span>
@@ -62,7 +62,7 @@
         Passo a passo
       </a>
       <a style="margin: 2em; display: none" class="btn blue botao-reiniciar">
-        Reiniciar
+        Reiniciar Tabela
       </a>
     </div>
   </div>
@@ -72,20 +72,20 @@
       <div class="area-gramatica col m2">
         <span>
           <strong>Gramática: <br></strong>
-          S ::= aAc | bC <br>
-          A ::= cB <br>
-          B ::= bCa | & <br>
-          C ::= aBa | b <br>
+          S ::= ABC <br>
+          A ::= aAb | & <br>
+          B ::= cBCcA | d <br>
+          C ::= eCBe | f <br>
         </span>
       </div>
 
       <div class=" area-first col m2">
         <span>
           <strong>First:</strong> <br>
-          S ::= { a, b } <br>
-          A ::= { c } <br>
-          B ::= { b, & } <br>
-          C ::= { a, b } <br>
+          S ::= { a, c, d } <br>
+          A ::= { a, & } <br>
+          B ::= { c, d } <br>
+          C ::= { e, f } <br>
         </span>
       </div>
 
@@ -93,9 +93,9 @@
         <span>
           <strong>Follow:</strong> <br>
           S ::= { $ } <br>
-          A ::= { c } <br>
-          B ::= { a, c } <br>
-          C ::= { a, $ } <br>
+          A ::= { c, d, b, e, f } <br>
+          B ::= { e, f } <br>
+          C ::= { $, c, d } <br>
         </span>
       </div>
 
@@ -146,17 +146,17 @@
 
       <div class="row">
         <div class="col m6">
-          <b>OK:</b>
-          <p>acbaaac | 13 iterações</p>
-          <p>acbbac  | 11 iterações</p>
-          <p>bb      | 5 iterações</p>
-          <p>acc     | 7 iterações</p>
+          <b>Sentenças OK:</b>
+          <p>acbbac | 11 iterações</p>
+          <p>acbabaaaaac | 19 iterações</p>
+          <p>acc | 7 iterações</p>
+          <p>bb  | 5 iterações</p>
         </div>
 
         <div class="col m6">
-          <b>Erro:</b>
-          <p>bacaba | 6 iterações</p>
-          <p>babaca | 10 iterações</p>
+          <b>Sentenças Erro:</b>
+          <p>acbbbca | 9 iterações</p>
+          <p>babaca  | 10 iterações</p>
         </div>
       </div>
     </div>
