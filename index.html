@@ -69,7 +69,7 @@
 
   <div id="ex1" class="modal">
     <div class="row area-detalhes" style="margin-top: 2em;">
-      <div class="area-gramatica col m2">
+      <div class="area-gramatica col m4">
         <span>
           <strong>Gramática: <br></strong>
           S ::= ABC <br>
@@ -79,7 +79,7 @@
         </span>
       </div>
 
-      <div class=" area-first col m2">
+      <div class=" area-first col m4">
         <span>
           <strong>First:</strong> <br>
           S ::= { a, c, d } <br>
@@ -89,7 +89,7 @@
         </span>
       </div>
 
-      <div class=" area-follow col m2">
+      <div class=" area-follow col m4">
         <span>
           <strong>Follow:</strong> <br>
           S ::= { $ } <br>
@@ -99,7 +99,7 @@
         </span>
       </div>
 
-      <div class="area-tabela col m6">
+      <div class="area-tabela col m12">
         <strong>Tabela:</strong>
         <table class="centered bordered tabela-automato">
           <thead>
@@ -107,45 +107,58 @@
             <th>a</th>
             <th>b</th>
             <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
             <th>$</th>
           </thead>
           <tbody>
             <tr class="tr-tabela linha-S">
               <td>S</td>
-              <td class="coluna-a">S => aAc</td>
-              <td class="coluna-b">S => bC</td>
-              <td class="coluna-c"></td>
+              <td class="coluna-a">S => ABC</td>
+              <td class="coluna-b"></td>
+              <td class="coluna-c">S => ABC</td>
+              <td class="coluna-d">S => ABC</td>
+              <td class="coluna-e"></td>
+              <td class="coluna-f"></td>
               <td class="coluna-s"></td>
             </tr>
             <tr class="tr-tabela linha-A">
               <td>A</td>
-              <td class="coluna-a"></td>
-              <td class="coluna-b"></td>
-              <td class="coluna-c">A => cB</td>
+              <td class="coluna-a">A => aAb</td>
+              <td class="coluna-b">A => &</td>
+              <td class="coluna-c">A => &</td>
+              <td class="coluna-d">A => &</td>
+              <td class="coluna-e">A => &</td>
+              <td class="coluna-f">A => &</td>
               <td class="coluna-s"></td>
             </tr>
             <tr class="tr-tabela linha-B">
               <td>B</td>
-              <td class="coluna-a">B => &</td>
-              <td class="coluna-b">B => bCa</td>
-              <td class="coluna-c">B => &</td>
+              <td class="coluna-a"></td>
+              <td class="coluna-b"></td>
+              <td class="coluna-c">B => cBCcA</td>
+              <td class="coluna-d">B => d</td>
+              <td class="coluna-e"></td>
+              <td class="coluna-f"></td>
               <td class="coluna-s"></td>
             </tr>
             <tr class="tr-tabela linha-C">
               <td>C</td>
-              <td class="coluna-a">C => aBa</td>
-              <td class="coluna-b">C => b</td>
+              <td class="coluna-a"></td>
+              <td class="coluna-b"></td>
               <td class="coluna-c"></td>
+              <td class="coluna-d"></td>
+              <td class="coluna-e">C => eCBe</td>
+              <td class="coluna-f">C => f</td>
               <td class="coluna-s"></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h5>Entradas</h5>
-
       <div class="row">
-        <div class="col m6">
+        <div class="col m5">
           <b>Sentenças OK:</b>
           <p>acbbac | 11 iterações</p>
           <p>acbabaaaaac | 19 iterações</p>
@@ -153,7 +166,7 @@
           <p>bb  | 5 iterações</p>
         </div>
 
-        <div class="col m6">
+        <div class="col m5">
           <b>Sentenças Erro:</b>
           <p>acbbbca | 9 iterações</p>
           <p>babaca  | 10 iterações</p>

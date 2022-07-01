@@ -226,16 +226,16 @@ $(".botao-gerar").click(function () {
 
 function objetos(letra) {
   if (letra === "s") {
-    return ["aAc", "bC"];
+    return ["ABC"];
   }
   if (letra === "a") {
-    return ["cB"];
+    return ["aAb", "&"];
   }
   if (letra === "b") {
-    return ["&", "bCa"];
+    return ["cBCcA", "d"];
   }
   if (letra === "c") {
-    return ["aBa", "b"];
+    return ["eCBe", "f"];
   }
 }
 
